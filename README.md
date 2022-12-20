@@ -10,7 +10,7 @@
 
 To make the Telegram Bot work, you need to create Telegram Bot and get its
 API key. Also you need to get API key from Alphavantage. Then you need to 
-create keys.py file in `telegram_bot` folder with the following content:
+create `keys.py` file in `telegram_bot` folder with the following content:
 
 ```
 from itertools import cycle
