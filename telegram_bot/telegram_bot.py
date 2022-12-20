@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 from aiogram import Bot, Dispatcher, executor, types
 from alphavantage_api import Currency_pair
 from keys import TELEGRAM_API_TOKEN
