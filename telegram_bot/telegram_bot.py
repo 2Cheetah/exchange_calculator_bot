@@ -26,7 +26,7 @@ async def exchange_rate(message: types.Message):
     try:
         cur1 = currency_list[0].upper()
         cur2 = currency_list[1].upper()
-        await message.answer(f"Fetching exchange rate for a pair {cur1}-{cur2}...")
+        await message.answer(f"Fetching exchange rate for a pair {cur1}-{cur2}")
     except:
         await message.answer(f"Can't process provided data \"{message.text}\"")
     
@@ -34,7 +34,7 @@ async def exchange_rate(message: types.Message):
         currency_pair = Currency_pair(cur1, cur2)
         currency_pair.get_api_data()
         exchange_rate = currency_pair.exchange_rate()
-        await message.answer(f"Exchange rate for {cur1}-{cur2} is {exchange_rate:.4f} {cur2}")
+        await message.answer(f"Exchange rate for {cur1}-{cur2} is {exchange_rate:.2f} {cur2}")
         if exchange_amount:
             exchange_amount = float(exchange_amount[0].replace(',','.'))
             await message.answer(f"{exchange_amount:.2f} {cur1} = {exchange_amount * exchange_rate:.2f} {cur2}")
